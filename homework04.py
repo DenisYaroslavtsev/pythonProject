@@ -1,0 +1,8 @@
+my_string = input('В каком городе вы проживаете:')
+print(len(my_string))
+print(my_string.upper())
+print(my_string.lower())
+my_string = 'В каком городе вы проживаете:' # не совсем понял задание на счёт этой строчки(нужно было её не изменять и оставить также input?)
+print(my_string.replace(' ', ''))
+print(my_string [0])
+print(my_string [-1])
