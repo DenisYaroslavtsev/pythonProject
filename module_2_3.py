@@ -8,4 +8,5 @@ while index < len(my_list):
         index += 1
     elif number == 0:
         index += 1
+        continue
         break
