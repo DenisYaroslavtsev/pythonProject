@@ -6,6 +6,8 @@ for i in range(2, len(numbers)):
     for j in range(2, int(i ** 0.5) + 1):
         if i % j == 0:
             is_prime = False
+        elif j <= 0:
+            is_prime = True
             break
     if is_prime:
         primes.append(i)
