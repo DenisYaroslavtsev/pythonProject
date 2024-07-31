@@ -1,6 +1,6 @@
 import time
 class Video:
-    def __init__(self, title, duration,adult_mode=False):
+    def __init__(self, title, duration, adult_mode=False):
         self.title = title
         self.duration = duration
         self.time_now = 0
@@ -12,6 +12,9 @@ class User:
         self.nickname = nickname
         self.password = hash(password)
         self.age = age
+
+    def __str__(self):
+        return self.nickname
 
 class UrTube:
     def __init__(self):
@@ -50,7 +53,7 @@ class UrTube:
                     print("Вам нет 18 лет, пожалуйста покиньте страницу")
                     return
                 for second in range(video.duration):
-                    print(second + 1, end='')
+                    print(second + 1, end=' ')
                     time.sleep(1)
                 print("Конец видео")
                 return
@@ -60,7 +63,6 @@ class UrTube:
         for video in videos:
             if not any(v.title == video.title for v in self.videos):
                 self.videos.append(video)
-
 
 ur = UrTube()
 v1 = Video('Лучший язык программирования 2024 года', 200)
