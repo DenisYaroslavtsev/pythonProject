@@ -33,7 +33,6 @@ class Sedan(Vehicle):
     def __init__(self,owner: str, model: str, engine_power: int, color: str):
         super().__init__(owner, model, engine_power, color)
 
-# Текущие цвета __COLOR_VARIANTS = ['blue', 'red', 'green', 'black', 'white']
 vehicle1 = Sedan('Fedos', 'Toyota Mark II', 'blue', 500)
 
 # Изначальные свойства
