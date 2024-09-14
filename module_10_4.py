@@ -56,6 +56,7 @@ class Cafe:
                         next_guest.start()
                         time.sleep(1)
 
+
 tables = [Table(number) for number in range(1, 6)]
 # Имена гостей
 guests_names = [
