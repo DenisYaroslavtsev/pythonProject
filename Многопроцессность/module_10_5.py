@@ -1,6 +1,7 @@
 from multiprocessing import Pool
 import datetime
 
+
 def reed_info(name):
     all_data = []
     with open(name, 'r') as file:
