@@ -15,14 +15,15 @@ class TournamentTest(unittest.TestCase):
 
     @classmethod
     def tearDownClass(cls):
-        for key in sorted(cls.all_results.keys()):
-            print(f'{key}: {cls.all_results[key]}')
+        for key, value in cls.all_results.items():
+            results_str = {pos: runner.name for pos, runner in value.items()}
+            print(f'{key}: {results_str}')
 
     def test_husein_nik(self):
         tournament = Tournament(90, self.husein, self.nik)
         results = tournament.start()
         self.all_results[len(self.all_results) + 1] = results
-        self.assertTrue(results[max(results.keys())] == "Ник")
+        self.assertTrue(results[max(results.keys())] == self.nik)
 
     def test_andrey_nik(self):
         tournament = Tournament(90, self.andrey, self.nik)
