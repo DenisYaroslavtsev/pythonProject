@@ -34,3 +34,4 @@ async def delete_user(
         user_id: Annotated[str, Path(min_length=1, max_length=99, description="Enter User ID", example="2")]):
     users.pop(user_id)
     return f'User {user_id} has been delete'
+
