@@ -54,3 +54,4 @@ async def delete_user(
 
 
 a= 5
+b = 10
