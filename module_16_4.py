@@ -51,3 +51,6 @@ async def delete_user(
                 return users.pop(index)
     except IndexError:
         raise HTTPException(status_code=404, detail="User was not found")
+
+
+a= 5
