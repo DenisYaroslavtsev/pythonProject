@@ -20,7 +20,7 @@ async def home_page(request: Request) -> HTMLResponse:
     return templates.TemplateResponse("users.html", {"request": request, "users": users})
 
 
-@app.get("/users/{user_id}")
+@app.get("/user/{user_id}")
 async def get_users(request: Request, user_id: int) -> HTMLResponse:
     for user in users:
         if user.id == user_id:
